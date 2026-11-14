@@ -2,7 +2,7 @@
 
 An interactive **Microsoft Excel VBA application** that fetches live and historical foreign exchange rates via REST API, performs instant cross-currency conversions, refreshes live ISO currency lists, and generates automated 30-day historical trend charts.
 
-![Currency Converter UI](ui_converter.png)
+![Currency Converter UI](assets/ui_converter.png)
 
 ---
 
@@ -15,7 +15,7 @@ An interactive **Microsoft Excel VBA application** that fetches live and histori
 * **Live Currency Table Refresh:** Includes a built-in Web Query refresh button (`Re-Fresh List of Currencies`) that updates the backend `tbl_currencylist` table and dynamically repopulates dropdowns.
 * **Locale-Safe Date & JSON Parsing:** Custom native VBA JSON parser (`ExtractRate`) and regional-independent date parser (`TryParseDate`) with zero external library dependencies.
 
-![30-Day Trend Chart](chart_30days.png)
+![30-Day Trend Chart](assets/chart_30days.png)
 
 ---
 
@@ -24,13 +24,13 @@ An interactive **Microsoft Excel VBA application** that fetches live and histori
 | File | Description |
 | :--- | :--- |
 | `Currency_Converter.xlsm` | Main macro-enabled Excel workbook containing the interface and backend tables |
-| `GetExcRate_and_ExtractRate.bas` | Standard VBA module handling HTTP requests, CDN failover, JSON parsing, and date validation |
-| `frm_currcalc.frm` / `.frx` | VBA UserForm source code and binary layout for the Currency Converter dialog |
+| `src/GetExcRate_and_ExtractRate.bas` | Standard VBA module handling HTTP requests, CDN failover, JSON parsing, and date validation |
+| `src/frm_currcalc.frm` / `src/frm_currcalc.frx` | VBA UserForm source code and binary layout for the Currency Converter dialog |
 
 ---
 
 ## 🚀 How to Use
-
+![Instructions](assets/Instructions.png)
 1. Download **`Currency_Converter.xlsm`** from this repository.
 2. Open the file in Microsoft Excel (2016 or newer on Windows) and click **Enable Content** (Enable Macros) if prompted.
 3. On the **Instructions** tab, click the **Currency Converter** button.
